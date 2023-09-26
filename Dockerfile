@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 RUN mkdir /opt/tomcat
 WORKDIR /opt/tomcat
-ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.76/bin/apache-tomcat-9.0.76.tar.gz .
+ADD https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.0-M11/bin/apache-tomcat-11.0.0-M11.tar.gz .
 RUN tar -xvzf apache-tomcat-9.0.76.tar.gz
 RUN mv apache-tomcat-9.0.76/* /opt/tomcat \
     apt-get install -y git && \
@@ -15,3 +15,7 @@ RUN mv apache-tomcat-9.0.76/* /opt/tomcat \
 EXPOSE 8080
 ##COPY ./index.html /opt/tomcat/webapps/ROOT/index.html
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
+
+
+
+
