@@ -13,7 +13,7 @@ RUN mv apache-tomcat-11.0.0-M11/* /opt/tomcat
 RUN apt-get update && \
     apt-get install -y git
 RUN git clone https://github.com/ARREYETTA14/Test_Restaurant_website.git /opt/tomcat/webapps/ROOT/index.html
-EXPOSE 8080
+EXPOSE 8081
 ##COPY ./index.html /opt/tomcat/webapps/ROOT/index.html
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
 
