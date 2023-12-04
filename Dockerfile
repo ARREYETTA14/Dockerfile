@@ -2,7 +2,7 @@
 
 FROM ubuntu:latest
 RUN apt-get update && apt-get install -y \
-    openjdk-8-jdk \
+    openjdk-11-jdk \
     wget \
     && rm -rf /var/lib/apt/lists/*
 RUN mkdir /opt/tomcat
